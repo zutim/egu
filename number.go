@@ -38,8 +38,8 @@ func Round(f float64) int {
 	return int(math.Floor(f + 0.5))
 }
 
-// Default return default value if v is zero
-func Default(v, dv int) int {
+// DefaultInt return default value if v is zero
+func DefaultInt(v, dv int) int {
 	if v == 0 {
 		return dv
 	}

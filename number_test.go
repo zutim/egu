@@ -14,8 +14,8 @@ func TestMin(t *testing.T) {
 }
 
 func TestDefault(t *testing.T) {
-	assert.Equal(t, 1, Default(1, 2))
-	assert.Equal(t, 1, Default(0, 1))
+	assert.Equal(t, 1, DefaultInt(1, 2))
+	assert.Equal(t, 1, DefaultInt(0, 1))
 }
 
 func TestRound(t *testing.T) {
