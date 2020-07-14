@@ -11,9 +11,14 @@ const (
 	DateFormat = "2006-01-02"
 )
 
+// GetUnixTime
+func GetUnixTime() time.Time  {
+	return time.Now()
+}
+
 // GetTime return current local time
 func GetTime() time.Time {
-	return time.Now().In(GetLocalTimeZone())
+	return GetUnixTime().In(GetLocalTimeZone())
 }
 
 // GetLocalTimeZone
