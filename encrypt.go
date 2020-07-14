@@ -4,6 +4,7 @@ package egu
 import (
 	"crypto/md5"
 	"crypto/sha1"
+	"encoding/base64"
 	"encoding/hex"
 	"fmt"
 	"github.com/ebar-go/egu/aes"
@@ -44,3 +45,20 @@ func Aes(key []byte) Encrypt {
 func Rsa(public, private []byte) Encrypt  {
 	return rsa.New(public, private)
 }
+
+
+
+// Base64Decode decode base64 string
+func Base64Decode(encoded string) []byte {
+	decoded, err := base64.StdEncoding.DecodeString(encoded)
+	if err != nil {
+		return nil
+	}
+	return decoded
+}
+
+// Base64Encode return base64 string
+func Base64Encode(source []byte) string {
+	return base64.StdEncoding.EncodeToString(source)
+}
+
