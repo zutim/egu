@@ -1,0 +1,2 @@
+# egu
+easy golang utils
