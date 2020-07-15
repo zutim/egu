@@ -82,3 +82,21 @@ s := egu.Implode(arr, "-") // s is 1-2-3
 arr := egu.Explode("1-2-3", "-")
 fmt.Println(arr.Items())
 ```
+
+## File
+- PathExist: check file or directory exist
+```
+if egu.PathExist("/home") {
+  fmt.Println("exist")
+}
+```
+
+- Mkdir: create directory if not exist
+```
+egu.Mkdir("/var/log/app", true)
+```
+
+- RuntimeCaller: return code invoke trace, always use in panic/recover
+```
+fmt.Println(egu.RuntimeCaller())
+```
