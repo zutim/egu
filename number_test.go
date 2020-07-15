@@ -1,6 +1,7 @@
 package egu
 
 import (
+	"fmt"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
@@ -26,3 +27,6 @@ func TestDiv(t *testing.T) {
 	assert.Equal(t, 4, Div(12, 3))
 }
 
+func TestRandInt(t *testing.T) {
+	fmt.Println(RandInt(1, 3))
+}

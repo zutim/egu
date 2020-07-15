@@ -1,6 +1,10 @@
 package egu
 
-import "math"
+import (
+	"math"
+	"math/rand"
+	"time"
+)
 
 //Min return min number
 func Min(a, b int) int {
@@ -45,4 +49,11 @@ func DefaultInt(v, dv int) int {
 	}
 
 	return v
+}
+
+
+// RandInt 取随机数
+func RandInt(min, max int) int {
+	rand.Seed(time.Now().UnixNano())
+	return min + rand.Intn(max-min)
 }
