@@ -29,12 +29,19 @@ min := egu.Min(1, 2) // min is 1
 ```
 
 ## Json
+```
+s, err := egu.JsonEncode(map[string]interface{}{"name":"test"})
+fmt.Println(s, err)
+m := make(map[string]interface{})
+decodeErr = egu.JsonDecode(s, &m)
+fmt.Println(decodeErr, m)
+```
 
 ## Date
 - GetTimeStr: return current time, eg:2019-12-30 22:00:00
 ```
 now := egu.GetTimeStr()
-```
+``` 
 
 - GetDateStr(): return current date, eg: 2019-12-30
 ```
