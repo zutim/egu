@@ -1,4 +1,4 @@
-module github.com/ebar-go/egu
+module github.com/zutim/egu
 
 go 1.14
 
